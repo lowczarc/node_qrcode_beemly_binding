@@ -1,0 +1,19 @@
+[package]
+name = "node_qrcode_beemly_binding"
+version = "0.1.0"
+authors = ["Lancelot OWCZARCZAK <lancelot@beemly.app>"]
+license = "MIT"
+build = "build.rs"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "node_qrcode_beemly_binding"
+crate-type = ["dylib"]
+
+[build-dependencies]
+neon-build = "0.2.0"
+
+[dependencies]
+neon = "0.2.0"
+image = "0.21.1"
+beautiful_qrcode_generator_beemly = { git = "https://github.com/lowczarc/beautiful_qrcode_generator_beemly" }
